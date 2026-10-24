@@ -5,14 +5,14 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  workflow_dispatch: # ФІЧА 1: Дозволяє запускати тести вручну з інтерфейсу GitHub
+  workflow_dispatch: 
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.10", "3.11", "3.12"] # ФІЧА 2: Тестування відразу на трьох версіях Python
+        python-version: ["3.10", "3.11", "3.12"] 
 
     steps:
     - uses: actions/checkout@v4
