@@ -9,6 +9,4 @@ def get_highest_grade(grades: list[float]) -> float:
     return max(grades)
 
 def is_passing(average_score: float, threshold: float = 60.0) -> bool:
-    # НАВМИСНА ПОМИЛКА: має бути >=, а стоїть >. 
-    # Якщо бал рівно 60, функція поверне False, хоча мало б бути True.
     return average_score > threshold
